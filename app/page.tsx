@@ -1,13 +1,13 @@
-import Header from '@/components/Header'
-import Profile from '@/components/Profile'
-import Works from '@/components/Works'
-import Posts from '@/components/Posts'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import Header from '@/components/layout/Header'
+import Profile from '@/components/home/Profile'
+import Works from '@/components/home/Works'
+import Posts from '@/components/home/Posts'
+import Contact from '@/components/layout/Contact'
+import Footer from '@/components/layout/Footer'
 
 export default function Home() {
   return (
-    <main className="bg-white w-full min-h-screen">
+    <main className="min-h-screen w-full bg-white">
       <Header />
       <Profile />
       <Works />

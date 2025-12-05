@@ -27,11 +27,7 @@ export const metadata: Metadata = {
   description: 'フルスタックエンジニア Fugashi のポートフォリオサイト',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <body className={`${inter.variable} ${notoSans.variable} ${notoSansJP.variable}`}>

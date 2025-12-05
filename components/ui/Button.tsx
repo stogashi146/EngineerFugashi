@@ -20,20 +20,22 @@ export default function Button({
   onClick,
   href,
   className = '',
-  icon
+  icon,
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-noto font-medium transition rounded-[20px]'
+  const baseStyles =
+    'inline-flex items-center justify-center font-noto font-medium transition rounded-[20px]'
 
   const variantStyles = {
-    primary: 'bg-accent text-main hover:bg-opacity-90',
+    primary:
+      'bg-accent text-main hover:bg-opacity-90 hover:text-accent hover:border-accent hover:bg-base hover:border-2',
     secondary: 'bg-accent border-2 border-accent text-main hover:bg-opacity-90',
-    outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+    outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white',
   }
 
   const sizeStyles = {
-    small: 'px-[12px] py-[4px] text-[16px] h-[30px]',
+    small: 'px-[12px] py-[4px] text-[14px] h-[30px]',
     medium: 'px-[12px] py-[10px] text-[14px] h-[32px] w-[144px]',
-    large: 'px-[12px] py-[10px] text-[16px] h-[40px] w-[132px]'
+    large: 'px-[12px] py-[10px] text-[14px] h-[40px] w-[132px]',
   }
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`

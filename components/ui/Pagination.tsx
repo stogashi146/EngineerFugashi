@@ -8,29 +8,29 @@ interface PaginationProps {
 
 export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   return (
-    <div className="flex items-center justify-center gap-4 h-[30px]">
+    <div className="flex h-[30px] items-center justify-center gap-[12px] md:gap-4">
       <button
         onClick={() => onPageChange?.(currentPage - 1)}
         disabled={currentPage === 1}
-        className="border-2 border-accent rounded-[20px] px-[12px] py-[10px] h-[30px] flex items-center justify-center hover:bg-accent hover:text-white transition disabled:opacity-50"
+        className="flex h-[30px] items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition hover:bg-accent hover:text-white disabled:opacity-50"
       >
         <svg width="7.4" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M7 1L2 6L7 11" stroke="currentColor" strokeWidth="2" className="text-accent"/>
+          <path d="M7 1L2 6L7 11" stroke="currentColor" strokeWidth="2" className="text-accent" />
         </svg>
       </button>
 
-      <div className="font-noto font-medium text-[18px] text-black leading-[normal]">
-        <span className="text-accent underline">{currentPage}</span>
-        {' '}2 3 ・・・ {totalPages - 2} {totalPages - 1} {totalPages}
+      <div className="font-noto text-[14px] font-medium leading-[normal] text-black md:text-[18px]">
+        <span className="text-accent underline">{currentPage}</span> 2 3 ・・・ {totalPages - 2}{' '}
+        {totalPages - 1} {totalPages}
       </div>
 
       <button
         onClick={() => onPageChange?.(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="border-2 border-accent rounded-[20px] px-[12px] py-[10px] h-[30px] flex items-center justify-center hover:bg-accent hover:text-white transition disabled:opacity-50"
+        className="flex h-[30px] items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition hover:bg-accent hover:text-white disabled:opacity-50"
       >
         <svg width="7.4" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="2" className="text-accent"/>
+          <path d="M1 11L6 6L1 1" stroke="currentColor" strokeWidth="2" className="text-accent" />
         </svg>
       </button>
     </div>

@@ -3,42 +3,32 @@ import SectionTitle from '../ui/SectionTitle'
 
 export default function VisionSection() {
   return (
-    <section className="bg-main py-[86px]">
-      <div className="max-w-[1440px] mx-auto px-[240px]">
-        <div className="mb-[57px]">
+    <section className="bg-main py-[50px] md:py-[86px]">
+      <div className="mx-auto max-w-[1440px] px-[17px] md:px-[240px]">
+        <div className="mb-[32px] md:mb-[57px]">
           <SectionTitle title="VISION" subtitle="将来像" />
         </div>
 
-        <div className="bg-white rounded-[12px] p-12">
-          <h3 className="font-noto font-bold text-[24px] text-accent text-center leading-[normal] mb-8">
+        <div className="rounded-[12px] bg-white p-[16px] md:p-12">
+          <h3 className="mb-[16px] text-center font-noto text-[18px] font-bold leading-[normal] text-accent md:mb-8 md:text-[24px]">
             何々をして何々を実現する
           </h3>
 
-          <div className="grid grid-cols-2 gap-8 mb-8">
+          <div className="mb-0 grid grid-cols-1 gap-[16px] md:mb-8 md:grid-cols-2 md:gap-8">
             <div>
-              <p className="font-noto-jp font-medium text-[16px] text-[#373737] leading-[normal] mb-6">
+              <p className="mb-[12px] font-noto-jp text-[12px] font-medium leading-[normal] text-[#373737] md:mb-6 md:text-[16px]">
                 何々が何々だから、何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから何々が何々だから
               </p>
-              <div className="aspect-[302/175] relative rounded-lg overflow-hidden border-[3px] border-black">
-                <Image
-                  src="/images/vision1.jpg"
-                  alt="Vision 1"
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative aspect-[302/175] overflow-hidden rounded-lg border-[2px] border-black md:border-[3px]">
+                <Image src="/images/vision1.jpg" alt="Vision 1" fill className="object-cover" />
               </div>
             </div>
 
             <div>
-              <div className="aspect-[302/175] relative rounded-lg overflow-hidden border-[3px] border-black mb-6">
-                <Image
-                  src="/images/vision2.jpg"
-                  alt="Vision 2"
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative mb-[12px] aspect-[302/175] overflow-hidden rounded-lg border-[2px] border-black md:mb-6 md:border-[3px]">
+                <Image src="/images/vision2.jpg" alt="Vision 2" fill className="object-cover" />
               </div>
-              <p className="font-noto-jp font-medium text-[16px] text-[#373737] leading-[normal]">
+              <p className="font-noto-jp text-[12px] font-medium leading-[normal] text-[#373737] md:text-[16px]">
                 何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい何々していきたい
               </p>
             </div>

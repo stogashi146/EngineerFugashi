@@ -1,6 +1,6 @@
-import Header from '@/components/Header'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import Header from '@/components/layout/Header'
+import Contact from '@/components/layout/Contact'
+import Footer from '@/components/layout/Footer'
 import FilterButton from '@/components/ui/FilterButton'
 import PostDetailCard from '@/components/posts/PostDetailCard'
 import Pagination from '@/components/ui/Pagination'
@@ -11,77 +11,77 @@ const posts = [
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 2,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 3,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 4,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 5,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 6,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 7,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
+    category: 'カテゴリー名',
   },
   {
     id: 8,
     imageUrl: '/images/post1.jpg',
     title: 'ページタイトル',
     description: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
-    category: 'カテゴリー名'
-  }
+    category: 'カテゴリー名',
+  },
 ]
 
 export default function PostsPage() {
   return (
-    <main className="bg-white w-full min-h-screen">
+    <main className="min-h-screen w-full bg-white">
       <Header />
 
       {/* POSTS Title */}
-      <section className="bg-white pt-20 pb-12">
-        <div className="max-w-[1440px] mx-auto px-[240px]">
-          <h1 className="font-noto font-bold text-[48px] text-accent text-center underline leading-[normal]">
+      <section className="bg-white pb-[32px] pt-[68px] md:pb-12 md:pt-20">
+        <div className="mx-auto max-w-[1440px] px-[17px] md:px-[240px]">
+          <h1 className="text-center font-noto text-[36px] font-bold leading-[normal] text-accent underline md:text-[48px]">
             POSTS
           </h1>
         </div>
       </section>
 
       {/* Posts List */}
-      <section className="bg-white pb-20">
-        <div className="max-w-[1440px] mx-auto px-[120px]">
-          <div className="flex gap-[11px] mb-[44px]">
+      <section className="bg-white pb-[50px] md:pb-20">
+        <div className="mx-auto max-w-[1440px] px-[17px] md:px-[20px] lg:px-[240px]">
+          <div className="mb-[32px] flex gap-[12px] overflow-x-auto md:mb-[44px] md:gap-[11px]">
             <FilterButton active>All</FilterButton>
             <FilterButton>カテゴリー1</FilterButton>
             <FilterButton>カテゴリー2</FilterButton>
@@ -91,7 +91,7 @@ export default function PostsPage() {
             <FilterButton>カテゴリー3</FilterButton>
           </div>
 
-          <div className="grid grid-cols-4 gap-x-[23px] gap-y-[17px] mb-[40px]">
+          <div className="mb-[32px] grid grid-cols-2 gap-x-[16px] gap-y-[16px] md:mb-[40px] md:grid-cols-4 md:gap-x-[23px] md:gap-y-[17px]">
             {posts.map((post) => (
               <PostDetailCard
                 key={post.id}

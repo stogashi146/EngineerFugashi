@@ -11,20 +11,27 @@ interface WorkDetailCardProps {
   badges: Array<{ label: string; variant?: 'primary' | 'secondary' }>
 }
 
-export default function WorkDetailCard({ id, imageUrl, category, period, title, badges }: WorkDetailCardProps) {
+export default function WorkDetailCard({
+  id,
+  imageUrl,
+  category,
+  period,
+  title,
+  badges,
+}: WorkDetailCardProps) {
   return (
-    <Link href={`/works/${id}`} className="block group">
-      <div className="border-[3px] border-black rounded-lg overflow-hidden mb-[12px] relative bg-[#505050] bg-opacity-30" style={{ aspectRatio: '235/236' }}>
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover rounded-lg"
-        />
+    <Link href={`/works/${id}`} className="group block">
+      <div
+        className="relative mb-[8px] overflow-hidden rounded-lg border-[2px] border-black bg-[#505050] bg-opacity-30 md:mb-[12px] md:border-[3px]"
+        style={{ aspectRatio: '235/236' }}
+      >
+        <Image src={imageUrl} alt={title} fill className="rounded-lg object-cover" />
       </div>
 
-      <div className="font-noto-jp font-medium text-[14px] text-black leading-[normal] mb-[8px]">
-        <p className="mb-0">{category} | {period}</p>
+      <div className="mb-[6px] font-noto-jp text-[12px] font-medium leading-[normal] text-black md:mb-[8px] md:text-[14px]">
+        <p className="mb-0">
+          {category} | {period}
+        </p>
         <p className="mb-0">{title}</p>
       </div>
 
