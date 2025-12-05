@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #80999c;
+  --base: #ffffff;
+  --main: #f2f5f5;
+  --text: #454545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background: var(--base);
+  font-family: var(--font-noto-sans-jp), sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+@layer utilities {
+  .mb-0 {
+    margin-bottom: 0 !important;
+  }
+}
