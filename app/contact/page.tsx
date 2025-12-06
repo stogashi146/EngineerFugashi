@@ -1,11 +1,6 @@
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen w-full flex-col bg-white">
-      <Header />
-
+    <>
       {/* Contact Section */}
       <section className="flex flex-1 items-center justify-center bg-main pb-[50px] pt-[68px] md:pb-20 md:pt-20">
         <div className="mx-auto w-full max-w-[1440px] px-[17px] text-center md:px-[240px]">
@@ -42,8 +37,6 @@ export default function ContactPage() {
           </a>
         </div>
       </section>
-
-      <Footer />
-    </main>
+    </>
   )
 }

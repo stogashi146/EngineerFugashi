@@ -58,7 +58,7 @@ export default function Posts() {
     <section id="posts" className="bg-white py-[50px] md:py-[86px]">
       <div className="mx-auto max-w-[1440px] md:px-[30px] xl:px-[140px]">
         <div>
-          <SectionTitle title="POSTS" subtitle="投稿一覧" />
+          <SectionTitle sectionType="h2" title="POSTS" subtitle="投稿一覧" />
         </div>
 
         <div className="mb-[28px] grid grid-cols-2 gap-x-[16px] gap-y-[16px] md:mb-[32px] md:grid-cols-4 md:gap-x-[23px] md:gap-y-[17px]">

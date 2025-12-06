@@ -66,9 +66,7 @@ const posts = [
 
 export default function PostsPage() {
   return (
-    <main className="min-h-screen w-full bg-white">
-      <Header />
-
+    <>
       {/* POSTS Title */}
       <section className="bg-white pb-[32px] pt-[68px] md:pb-12 md:pt-20">
         <div className="mx-auto max-w-[1440px] px-[17px] md:px-[240px]">
@@ -108,7 +106,6 @@ export default function PostsPage() {
       </section>
 
       <Contact />
-      <Footer />
-    </main>
+    </>
   )
 }

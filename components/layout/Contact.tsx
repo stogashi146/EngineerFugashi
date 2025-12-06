@@ -8,7 +8,7 @@ export default function Contact() {
     >
       <div className="mx-auto w-full max-w-[1440px] px-[17px] text-center md:px-[30px] xl:px-[140px]">
         <div className="mb-[24px] md:mb-[33px]">
-          <SectionTitle title="CONTACT" subtitle="お問い合わせ" />
+          <SectionTitle sectionType="h2" title="CONTACT" subtitle="お問い合わせ" />
         </div>
 
         <h3 className="mb-[12px] font-noto text-[22px] font-bold leading-[normal] text-accent md:text-[26px]">

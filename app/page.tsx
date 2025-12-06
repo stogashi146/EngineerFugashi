@@ -7,13 +7,11 @@ import Footer from '@/components/layout/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-white">
-      <Header />
+    <>
       <Profile />
       <Works />
       <Posts />
       <Contact />
-      <Footer />
-    </main>
+    </>
   )
 }

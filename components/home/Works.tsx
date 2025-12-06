@@ -59,7 +59,7 @@ export default function Works() {
     <section id="works" className="bg-main py-[50px] md:py-[86px]">
       <div className="mx-auto max-w-[1440px] px-[17px] md:px-[30px] xl:px-[140px]">
         <div>
-          <SectionTitle title="WORKS" subtitle="制作実績" />
+          <SectionTitle sectionType="h2" title="WORKS" subtitle="制作実績" />
         </div>
 
         <div className="mb-[16px] flex gap-[6px] md:mb-[16px] md:gap-[11px]">

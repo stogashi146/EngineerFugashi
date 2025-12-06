@@ -51,9 +51,7 @@ const workDetail = {
 
 export default function WorkDetailPage({ params }: { params: { id: string } }) {
   return (
-    <main className="min-h-screen w-full bg-white">
-      <Header />
-
+    <>
       {/* Hero Image Section */}
       <section className="bg-white pb-[32px] pt-[68px] md:pb-12 md:pt-20">
         <div className="mx-auto max-w-[1440px] px-[17px] md:px-[222px]">
@@ -229,7 +227,6 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
       </section>
 
       <Contact />
-      <Footer />
-    </main>
+    </>
   )
 }

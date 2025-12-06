@@ -5,17 +5,18 @@ import HistorySection from '@/components/profile/HistorySection'
 import VisionSection from '@/components/profile/VisionSection'
 import Contact from '@/components/layout/Contact'
 import Footer from '@/components/layout/Footer'
+import SectionTitle from '@/components/ui/SectionTitle'
 
 export default function ProfilePage() {
   return (
-    <main className="min-h-screen w-full bg-white">
-      <Header />
+    <>
+      <SectionTitle sectionType="h1" title="PROFILE" />
       <ProfileDetail />
       <SkillSection />
       <HistorySection />
-      <VisionSection />
+      {/* <VisionSection /> */}
       <Contact />
       <Footer />
-    </main>
+    </>
   )
 }
