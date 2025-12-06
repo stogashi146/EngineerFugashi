@@ -190,7 +190,7 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
                 <a
                   key={index}
                   href={output.href}
-                  className="flex h-[40px] w-full items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition hover:bg-accent hover:text-white md:w-[144px]"
+                  className="flex h-[40px] w-full items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md md:w-[144px]"
                 >
                   <span className="font-noto text-[14px] font-bold text-accent hover:text-white md:text-[16px]">
                     {output.label}
@@ -210,7 +210,7 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
             </Link>
             <Link
               href="/works"
-              className="order-3 flex h-[60px] w-full items-center justify-center rounded-[4px] border-2 border-accent px-[12px] py-[10px] transition hover:bg-accent hover:text-white md:order-2 md:h-[74px] md:w-[203px]"
+              className="order-3 flex h-[60px] w-full items-center justify-center rounded-[4px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md md:order-2 md:h-[74px] md:w-[203px]"
             >
               <span className="font-noto text-[16px] font-bold text-accent md:text-[18px]">
                 WORKSに戻る

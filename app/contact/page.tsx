@@ -25,7 +25,7 @@ export default function ContactPage() {
 
           <a
             href="#"
-            className="inline-flex items-center justify-center gap-2 rounded border-2 border-accent px-[16px] py-[12px] font-noto text-[16px] font-medium text-accent transition hover:bg-accent hover:text-white md:px-[20px] md:py-[14px] md:text-[18px]"
+            className="inline-flex items-center justify-center gap-2 rounded border-2 border-accent px-[16px] py-[12px] font-noto text-[16px] font-medium text-accent transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md md:px-[20px] md:py-[14px] md:text-[18px]"
           >
             <span>Contact</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

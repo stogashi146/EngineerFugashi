@@ -24,7 +24,7 @@ export default function Profile() {
               className="ml-auto mr-[2rem] h-[450px] w-[330px] rounded-[12px] object-cover"
             />
           </div>
-          <div className="flex-1 pt-0">
+          <div className="flex flex-1 flex-col pt-0">
             <h1 className="mb-2 font-noto text-[36px] font-bold leading-tight text-accent">
               Fugashi
             </h1>
@@ -32,7 +32,7 @@ export default function Profile() {
               フルスタックエンジニア
             </p>
 
-            <div className="mb-[63px] font-noto-jp text-[16px] leading-[30px] text-[#373737] md:mb-[63px]">
+            <div className="mb-[16px] font-noto-jp text-[16px] leading-[30px] text-[#373737]">
               <p className="mb-0">フリーランスエンジニア</p>
               <p className="mb-0">IT業界で約10年、うち後半5年はWEBフルスタック開発に従事。</p>
               <p className="mb-0">
@@ -46,13 +46,13 @@ export default function Profile() {
               <p className="mb-0">趣味は来年のマラソンに向けたランニング。</p>
             </div>
 
-            <div className="mb-[16px] flex justify-center gap-[8px] md:justify-start md:gap-[8px]">
+            <div className="mb-[24px] flex justify-center gap-[8px] md:justify-evenly md:gap-[8px]">
               <SocialButton href="https://x.com">X</SocialButton>
               <SocialButton href="https://linkedin.com">LinkedIn</SocialButton>
               <SocialButton href="https://github.com">GitHub</SocialButton>
             </div>
 
-            <div className="flex justify-center text-right md:block">
+            <div className="mt-auto flex justify-center text-right md:block">
               <Button href="#" variant="primary" size="medium">
                 More
               </Button>

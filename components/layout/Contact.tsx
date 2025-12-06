@@ -1,4 +1,4 @@
-import SectionTitle from '../ui/SectionTitle'
+import SectionTitle from '@/components/ui/SectionTitle'
 
 export default function Contact() {
   return (
@@ -26,7 +26,7 @@ export default function Contact() {
 
         <a
           href="#"
-          className="inline-flex h-[66px] w-[238px] items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition hover:bg-accent hover:text-white"
+          className="inline-flex h-[66px] w-[238px] items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md"
         >
           <span>Contact</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

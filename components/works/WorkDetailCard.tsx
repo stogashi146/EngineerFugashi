@@ -8,7 +8,7 @@ interface WorkDetailCardProps {
   category: string
   period: string
   title: string
-  badges: Array<{ label: string; variant?: 'primary' | 'secondary' }>
+  badges?: Array<{ label: string; variant?: 'primary' | 'secondary' }>
 }
 
 export default function WorkDetailCard({
@@ -17,15 +17,23 @@ export default function WorkDetailCard({
   category,
   period,
   title,
-  badges,
+  badges = [],
 }: WorkDetailCardProps) {
   return (
-    <Link href={`/works/${id}`} className="group block">
+    <Link
+      href={`/works/${id}`}
+      className="group block transition-transform duration-300 hover:-translate-y-1"
+    >
       <div
-        className="relative mb-[8px] overflow-hidden rounded-lg border-[2px] border-black bg-[#505050] bg-opacity-30 md:mb-[12px] md:border-[3px]"
+        className="relative mb-[8px] overflow-hidden rounded-lg border-[2px] border-black bg-[#505050] bg-opacity-30 transition-shadow duration-300 group-hover:shadow-xl md:mb-[12px] md:border-[3px]"
         style={{ aspectRatio: '235/236' }}
       >
-        <Image src={imageUrl} alt={title} fill className="rounded-lg object-cover" />
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-110"
+        />
       </div>
 
       <div className="mb-[6px] font-noto-jp text-[12px] font-medium leading-[normal] text-black md:mb-[8px] md:text-[14px]">
@@ -36,11 +44,12 @@ export default function WorkDetailCard({
       </div>
 
       <div className="flex flex-wrap gap-[4px]">
-        {badges.map((badge, index) => (
-          <Badge key={index} variant={badge.variant}>
-            {badge.label}
-          </Badge>
-        ))}
+        {badges.length > 0 &&
+          badges.map((badge, index) => (
+            <Badge key={index} variant={badge.variant}>
+              {badge.label}
+            </Badge>
+          ))}
       </div>
     </Link>
   )

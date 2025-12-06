@@ -23,13 +23,13 @@ export default function Button({
   icon,
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center font-noto font-medium transition rounded-[20px]'
+    'inline-flex items-center justify-center font-noto font-medium transition-all duration-300 ease-in-out rounded-[20px] transform hover:scale-105 active:scale-95'
 
   const variantStyles = {
     primary:
-      'bg-accent text-main hover:bg-opacity-90 hover:text-accent hover:border-accent hover:bg-base hover:border-2',
-    secondary: 'bg-accent border-2 border-accent text-main hover:bg-opacity-90',
-    outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white',
+      'bg-accent text-main hover:bg-opacity-90 hover:text-accent hover:border-accent hover:bg-base hover:border-2 hover:shadow-md',
+    secondary: 'bg-accent border-2 border-accent text-main hover:bg-opacity-90 hover:shadow-md',
+    outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white hover:shadow-md',
   }
 
   const sizeStyles = {
