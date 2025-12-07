@@ -25,7 +25,7 @@ export default function WorkDetailCard({
       className="group block transition-transform duration-300 hover:-translate-y-1"
     >
       <div
-        className="relative mb-[8px] overflow-hidden rounded-lg border-[2px] border-black bg-[#505050] bg-opacity-30 transition-shadow duration-300 group-hover:shadow-xl md:mb-[12px] md:border-[3px]"
+        className="relative mb-[4px] overflow-hidden rounded-lg border-[2px] border-black bg-[#505050] bg-opacity-30 transition-shadow duration-300 group-hover:shadow-xl md:mb-[4px] md:border-[3px]"
         style={{ aspectRatio: '235/236' }}
       >
         <Image
@@ -37,10 +37,10 @@ export default function WorkDetailCard({
       </div>
 
       <div className="mb-[6px] font-noto-jp text-[12px] font-medium leading-[normal] text-black md:mb-[8px] md:text-[14px]">
-        <p className="mb-0">
+        <p className="mb-0 text-[10px]">
           {category} | {period}
         </p>
-        <p className="mb-0">{title}</p>
+        <p className="mb-0 text-[14px] text-accent">{title}</p>
       </div>
 
       <div className="flex flex-wrap gap-[4px]">

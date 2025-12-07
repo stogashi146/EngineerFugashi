@@ -13,7 +13,7 @@ export default function Badge({ children, variant = 'secondary' }: BadgeProps) {
     <div
       className={`${variantStyles[variant]} flex items-center justify-center rounded-[2px] px-[6px] py-[4px]`}
     >
-      <p className="font-noto text-[12px] font-bold leading-[normal]">{children}</p>
+      <p className="font-noto text-[12px] leading-[normal]">{children}</p>
     </div>
   )
 }

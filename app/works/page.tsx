@@ -1,6 +1,5 @@
 import Contact from '@/components/layout/Contact'
 import WorksFilteredGrid from '@/components/works/WorksFilteredGrid'
-import Pagination from '@/components/ui/Pagination'
 import { works } from '@/data/works'
 
 export default function WorksPage() {
@@ -18,11 +17,7 @@ export default function WorksPage() {
       {/* Works List */}
       <section className="bg-white pb-[50px] md:pb-20">
         <div className="mx-auto max-w-[1440px] px-[17px] md:px-[20px] lg:px-[240px]">
-          <WorksFilteredGrid works={works} showFilters={true} />
-
-          <div className="mt-[32px] md:mt-[40px]">
-            <Pagination currentPage={1} totalPages={9} />
-          </div>
+          <WorksFilteredGrid works={works} showFilters={true} showPagination={true} itemsPerPage={8} />
         </div>
       </section>
 

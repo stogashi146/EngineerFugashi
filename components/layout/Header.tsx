@@ -9,42 +9,61 @@ export default function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 h-[68px] w-full bg-white md:h-20">
       <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-[17px] md:px-[120px]">
-        <Link href="/" className="text-left font-inter font-bold leading-[normal]">
-          <p className="mb-0 text-[10px] text-black">Engineer</p>
-          <p className="text-[20px] text-accent">Fugashi</p>
+        <Link
+          href="/"
+          className="group text-left font-inter font-bold leading-[normal] transition-transform duration-300 ease-in-out hover:scale-105"
+        >
+          <p className="mb-0 text-[10px] text-black transition-colors duration-300 group-hover:text-accent">
+            Engineer
+          </p>
+          <p className="text-[20px] text-accent transition-all duration-300 group-hover:tracking-wider">
+            Fugashi
+          </p>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden h-full items-center gap-[25px] md:flex">
           <Link
             href="/profile"
-            className="flex h-full items-center text-center font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="flex h-full items-center text-center font-noto text-[16px] font-medium transition-all duration-300 hover:-translate-y-0.5"
           >
-            PROFILE
+            <span className="group relative text-black transition-colors duration-300 hover:text-accent">
+              PROFILE
+              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full"></span>
+            </span>
           </Link>
           <Link
             href="/works"
-            className="flex h-full items-center font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="flex h-full items-center font-noto text-[16px] font-medium transition-all duration-300 hover:-translate-y-0.5"
           >
-            WORKS
+            <span className="group relative text-black transition-colors duration-300 hover:text-accent">
+              WORKS
+              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full"></span>
+            </span>
           </Link>
           <Link
             href="/posts"
-            className="flex h-full items-center font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="flex h-full items-center font-noto text-[16px] font-medium transition-all duration-300 hover:-translate-y-0.5"
           >
-            POSTS
+            <span className="group relative text-black transition-colors duration-300 hover:text-accent">
+              POSTS
+              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full"></span>
+            </span>
           </Link>
           <Link
             href="/contact"
-            className="flex h-full items-center font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="flex h-full items-center font-noto text-[16px] font-medium transition-all duration-300 hover:-translate-y-0.5"
           >
-            CONTACT
+            <span className="group relative text-black transition-colors duration-300 hover:text-accent">
+              CONTACT
+              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full"></span>
+            </span>
           </Link>
         </nav>
 
         {/* Mobile Hamburger Menu */}
         <button
-          className="relative flex h-[31px] w-[46px] items-center justify-center md:hidden"
+          className="relative flex h-[31px] w-[46px] items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95 md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="メニュー"
         >
@@ -79,28 +98,28 @@ export default function Header() {
         <nav className="flex flex-col p-[17px]">
           <Link
             href="/profile"
-            className="border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="group border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition-all duration-300 hover:translate-x-2 hover:text-accent active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
             PROFILE
           </Link>
           <Link
             href="/works"
-            className="border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="group border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition-all duration-300 hover:translate-x-2 hover:text-accent active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
             WORKS
           </Link>
           <Link
             href="/posts"
-            className="border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="group border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition-all duration-300 hover:translate-x-2 hover:text-accent active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
             POSTS
           </Link>
           <Link
             href="/contact"
-            className="py-4 font-noto text-[16px] font-medium text-black transition hover:text-accent"
+            className="py-4 font-noto text-[16px] font-medium text-black transition-all duration-300 hover:translate-x-2 hover:text-accent active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
             CONTACT
