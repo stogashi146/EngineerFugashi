@@ -17,7 +17,13 @@ export default function PostsPage() {
       {/* Posts List */}
       <section className="bg-white pb-[50px] md:pb-20">
         <div className="mx-auto max-w-[1440px] px-[17px] md:px-[20px] lg:px-[240px]">
-          <PostsFilteredGrid posts={posts} showFilters={true} showPagination={true} itemsPerPage={8} />
+          <PostsFilteredGrid
+            posts={posts}
+            showFilters={true}
+            showPagination={true}
+            itemsPerPage={8}
+            filterButtonSize="small"
+          />
         </div>
       </section>
 

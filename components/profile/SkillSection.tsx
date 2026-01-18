@@ -7,7 +7,7 @@ const skills = [
     icon: '/images/icon-code.svg',
     title: 'WEBアプリケーション開発',
     description:
-      'フルスタックエンジニアとして、要件定義から設計・実装・運用まで一貫した開発が可能です。Ruby、Laravel、TypeScript、Next.js などを用いた API・フロント一体の開発を得意としており、機能追加から全体設計まで幅広く対応できます。',
+      'フルスタックエンジニアとして、要件定義から設計・実装・運用まで一貫した開発が可能です。Ruby、Laravel、TypeScript、Next.js、Python などを用いた API・フロント一体の開発を得意としており、機能追加から全体設計まで幅広く対応できます。',
   },
   {
     id: 2,
@@ -28,13 +28,13 @@ const skills = [
     icon: '/images/icon-ai.svg',
     title: 'AIエージェント開発',
     description:
-      'AI を活用したエージェント開発を学習中です。LLM の活用や自動化ワークフロー構築など、今後のプロダクト開発に活かせる領域に取り組んでおり、技術の幅をさらに広げていく予定です。',
+      'LLM を活用した RAG（検索拡張生成）や AI エージェントによるチャットボット・社内文書検索システムの構築が可能です。ベクトルデータベースを用いた独自知識の組み込みや、複数ツールを連携させた自律型エージェントの開発など、実用的な AI ソリューションを提供します。',
   },
 ]
 
 export default function SkillSection() {
   return (
-    <section className="bg-main py-[50px] md:py-[86px]">
+    <section className="bg-main py-[50px] md:py-[66px]">
       <div className="mx-auto max-w-[1440px] px-[17px] lg:px-[80px] xl:px-[240px]">
         <div className="mb-[32px] md:mb-[57px]">
           <SectionTitle sectionType="h2" title="SKILL" subtitle="できること" />

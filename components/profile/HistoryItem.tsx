@@ -22,10 +22,10 @@ export default function HistoryItem({
         <h4 className="font-noto text-[18px] font-bold leading-[normal] text-accent md:text-[24px]">
           {company}
         </h4>
-        <p className="mb-[12px] font-noto-jp text-[14px] font-medium leading-[normal] text-[#373737] md:mb-4 md:text-[16px]">
+        <p className="mb-[12px] font-noto-jp text-[14px] font-medium leading-[normal] text-[#373737] md:mb-2 md:text-[16px]">
           {period}
         </p>
-        <p className="line-height-[150%] whitespace-pre-wrap font-noto-jp text-[12px] leading-[normal] text-[#373737] md:text-[16px]">
+        <p className="line-height-[150%] whitespace-pre-wrap font-noto-jp text-[12px] leading-[normal] text-[#373737] md:text-[14px]">
           {description}
         </p>
       </div>

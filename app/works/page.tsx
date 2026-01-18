@@ -17,7 +17,13 @@ export default function WorksPage() {
       {/* Works List */}
       <section className="bg-white pb-[50px] md:pb-20">
         <div className="mx-auto max-w-[1440px] px-[17px] md:px-[20px] lg:px-[240px]">
-          <WorksFilteredGrid works={works} showFilters={true} showPagination={true} itemsPerPage={8} />
+          <WorksFilteredGrid
+            works={works}
+            showFilters={true}
+            showPagination={true}
+            itemsPerPage={8}
+            filterButtonSize="small"
+          />
         </div>
       </section>
 

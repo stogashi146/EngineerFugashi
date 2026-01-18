@@ -53,16 +53,16 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
   return (
     <>
       {/* Hero Image Section */}
-      <section className="bg-white pb-[32px] pt-[68px] md:pb-12 md:pt-20">
-        <div className="mx-auto max-w-[1440px] px-[17px] md:px-[222px]">
+      <section className="bg-white pb-[32px] pt-[68px] md:pb-12 md:pt-24">
+        <div className="mx-auto max-w-[1080px] px-[17px] md:px-[222px]">
           <div
-            className="work-detail-swiper relative w-full overflow-visible"
-            style={{ aspectRatio: '990/521' }}
+            className="work-detail-swiper relative w-full overflow-hidden"
+            style={{ aspectRatio: '16/9' }}
           >
             <Swiper
               modules={[Pagination, Navigation]}
               slidesPerView={1}
-              centeredSlides={false}
+              centeredSlides={true}
               spaceBetween={16}
               slideToClickedSlide={true}
               loop={false}
@@ -71,11 +71,12 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
                 bulletClass: 'swiper-pagination-bullet work-detail-bullet',
                 bulletActiveClass: 'swiper-pagination-bullet-active work-detail-bullet-active',
               }}
-              className="h-full !overflow-visible"
+              className="h-full"
               breakpoints={{
                 768: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 1.15,
                   spaceBetween: 30,
+                  centeredSlides: true,
                 },
               }}
             >
@@ -103,11 +104,11 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
             z-index: 10;
           }
           .work-detail-bullet {
-            width: 16px !important;
-            height: 16px !important;
+            width: 10px !important;
+            height: 10px !important;
             background: #d9d9d9 !important;
             opacity: 1 !important;
-            margin: 0 8px !important;
+            margin: 0 6px !important;
           }
           .work-detail-bullet-active {
             background: #80999c !important;
@@ -118,12 +119,12 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
           }
           @media (min-width: 768px) {
             .work-detail-swiper .swiper-pagination {
-              bottom: 21px !important;
+              bottom: 16px !important;
             }
             .work-detail-bullet {
-              width: 21px !important;
-              height: 21px !important;
-              margin: 0 17px !important;
+              width: 12px !important;
+              height: 12px !important;
+              margin: 0 8px !important;
             }
             .work-detail-swiper .swiper-slide:not(.swiper-slide-active) {
               opacity: 0.5;
@@ -137,7 +138,7 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
 
       {/* Work Details */}
       <section className="bg-white pb-[50px] md:pb-20">
-        <div className="mx-auto max-w-[1440px] px-[17px] md:px-[120px]">
+        <div className="mx-auto max-w-[1080px] px-[17px] md:px-[120px]">
           {/* Title and Period */}
           <h1 className="mb-[12px] font-noto text-[24px] font-bold leading-[normal] text-accent md:mb-[16px] md:text-[36px]">
             {workDetail.title}
@@ -190,7 +191,7 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
                 <a
                   key={index}
                   href={output.href}
-                  className="flex h-[40px] w-full items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md md:w-[144px]"
+                  className="flex h-[40px] w-full transform items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95 md:w-[144px]"
                 >
                   <span className="font-noto text-[14px] font-bold text-accent hover:text-white md:text-[16px]">
                     {output.label}
@@ -210,7 +211,7 @@ export default function WorkDetailPage({ params }: { params: { id: string } }) {
             </Link>
             <Link
               href="/works"
-              className="order-3 flex h-[60px] w-full items-center justify-center rounded-[4px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md md:order-2 md:h-[74px] md:w-[203px]"
+              className="order-3 flex h-[60px] w-full transform items-center justify-center rounded-[4px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95 md:order-2 md:h-[74px] md:w-[203px]"
             >
               <span className="font-noto text-[16px] font-bold text-accent md:text-[18px]">
                 WORKSに戻る

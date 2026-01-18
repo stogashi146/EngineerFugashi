@@ -56,7 +56,7 @@ const posts = [
 export default function Posts() {
   return (
     <section id="posts" className="bg-white py-[50px] md:py-[86px]">
-      <div className="mx-auto max-w-[1440px] md:px-[20px] lg:px-[160px]">
+      <div className="mx-auto max-w-[1440px] px-[17px] md:px-[40px] xl:px-[160px]">
         <div>
           <SectionTitle sectionType="h2" title="POSTS" subtitle="投稿一覧" />
         </div>

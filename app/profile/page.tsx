@@ -16,7 +16,7 @@ export default function ProfilePage() {
       <HistorySection />
       {/* <VisionSection /> */}
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

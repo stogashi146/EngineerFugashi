@@ -18,7 +18,7 @@ export default function Contact() {
           お問い合わせやお仕事に関する依頼は こちらからお願いします
         </p>
 
-        <div className="mx-auto mb-[32px] h-[65px] w-[65px] md:mb-[32px] md:h-[140px] md:w-[140px]">
+        <div className="mx-auto mb-[32px] h-[65px] w-[65px] md:mb-[32px] md:h-[80px] md:w-[80px]">
           <svg viewBox="0 0 24 24" fill="none" className="h-full w-full">
             <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="#80999C" />
           </svg>
@@ -26,7 +26,7 @@ export default function Contact() {
 
         <a
           href="#"
-          className="inline-flex h-[66px] w-[238px] items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:bg-accent hover:text-white hover:shadow-md"
+          className="inline-flex h-[66px] w-[238px] transform items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95"
         >
           <span>Contact</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
