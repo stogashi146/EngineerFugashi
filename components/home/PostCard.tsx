@@ -26,15 +26,14 @@ export default function PostCard({ imageUrl, title, date, url, source }: PostCar
       className="group block transition-transform duration-300 hover:-translate-y-1"
     >
       <div
-        className="relative mb-[5px] overflow-hidden rounded-lg border-[3px] border-black transition-shadow duration-300 group-hover:shadow-xl"
-        style={{ aspectRatio: '236/236' }}
+        className="relative mb-[5px] rounded-lg border-[3px] border-black bg-white transition-shadow duration-300 group-hover:shadow-xl"
+        style={{ aspectRatio: '16/9' }}
       >
-        <div className="absolute inset-0 rounded-lg bg-[#d9d9d9] opacity-30"></div>
         <Image
           src={imageUrl || DEFAULT_IMAGE}
           alt={title}
           fill
-          className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-110"
+          className="rounded-lg object-contain"
         />
       </div>
       <div className="font-noto-jp leading-[normal]">
