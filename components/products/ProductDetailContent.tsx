@@ -151,6 +151,52 @@ export default function ProductDetailContent({
             ))}
           </div>
 
+          {/* Outputs */}
+          {product.outputs.length > 0 && (
+            <div className="mb-[16px] md:mb-[24px]">
+              <div className="flex flex-wrap gap-[12px] md:gap-[24px]">
+                {product.outputs.map((output, index) => {
+                  // ロゴ画像があるタイプ
+                  const logoMap: Record<string, string> = {
+                    AppStore: '/images/store/apple_store_logo.svg',
+                    GooglePlay: '/images/store/google_play_logo.svg',
+                  }
+                  const logo = logoMap[output.type]
+
+                  return logo ? (
+                    <a
+                      key={index}
+                      href={output.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transform transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-80 active:scale-95"
+                    >
+                      <Image
+                        src={logo}
+                        alt={output.type}
+                        width={140}
+                        height={42}
+                        className="h-[42px] w-auto"
+                      />
+                    </a>
+                  ) : (
+                    <a
+                      key={index}
+                      href={output.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-[40px] transform items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95"
+                    >
+                      <span className="px-4 font-noto text-[14px] font-bold text-accent hover:text-white md:text-[16px]">
+                        {output.type}
+                      </span>
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Overview */}
           {product.overview && (
             <p className="mb-[16px] whitespace-pre-wrap font-noto-jp text-[14px] font-medium leading-[normal] text-black md:text-[16px]">
@@ -161,66 +207,42 @@ export default function ProductDetailContent({
           {/* Contents (Rich Editor HTML) */}
           {product.contents && (
             <div
-              className={`mb-[32px] font-noto-jp text-[14px] leading-[1.8] text-black md:mb-[16px] md:text-[16px] [&_a]:text-accent [&_a]:underline [&_h2]:mb-[2px] [&_h2]:mt-[12px] [&_h2]:text-[16px] [&_h2]:font-bold [&_h2]:text-accent md:[&_h2]:mb-[4px] md:[&_h2]:mt-[16px] md:[&_h2]:text-[24px] [&_h3]:mb-[2px] [&_h3]:mt-[16px] [&_h3]:text-[13px] [&_h3]:font-bold md:[&_h3]:mb-[4px] md:[&_h3]:mt-[24px] md:[&_h3]:text-[20px] [&_li]:mb-[2px] md:[&_li]:mb-[4px] [&_ol]:mb-[12px] [&_ol]:ml-[12px] [&_ol]:list-decimal [&_ol]:pl-[12px] md:[&_ol]:mb-[16px] md:[&_ol]:ml-[16px] md:[&_ol]:pl-[16px] [&_p]:py-[0.8rem] md:[&_p]:py-[0.8rem] [&_table]:my-[8px] [&_table]:ml-[8px] [&_table]:block [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-x-auto [&_table]:border [&_table]:border-gray-300 [&_table]:text-[10px] md:[&_table]:my-[8px] md:[&_table]:ml-[16px] md:[&_table]:table md:[&_table]:text-[14px] [&_td]:border [&_td]:border-gray-300 [&_td]:px-[8px] [&_td]:py-[6px] md:[&_td]:px-[12px] md:[&_td]:py-[8px] [&_th]:whitespace-nowrap [&_th]:border [&_th]:border-gray-300 [&_th]:bg-accent [&_th]:px-[8px] [&_th]:py-[6px] [&_th]:text-left [&_th]:font-bold [&_th]:text-white md:[&_th]:px-[12px] md:[&_th]:py-[8px] [&_tr:nth-child(even)]:bg-gray-50 [&_ul]:mb-[12px] [&_ul]:ml-[12px] [&_ul]:list-disc [&_ul]:pl-[12px] md:[&_ul]:mb-[16px] md:[&_ul]:ml-[16px] md:[&_ul]:pl-[16px]`}
+              className={`mb-[32px] font-noto-jp text-[14px] leading-[1.8] text-black md:mb-[16px] md:text-[16px] [&_a]:text-accent [&_a]:underline [&_h2]:mb-[2px] [&_h2]:mt-[12px] [&_h2]:text-[16px] [&_h2]:font-bold [&_h2]:text-accent md:[&_h2]:mb-[4px] md:[&_h2]:mt-[16px] md:[&_h2]:text-[24px] [&_h3]:mb-[2px] [&_h3]:mt-[16px] [&_h3]:text-[13px] [&_h3]:font-bold [&_h3]:text-accent md:[&_h3]:mb-[4px] md:[&_h3]:mt-[24px] md:[&_h3]:text-[20px] [&_li]:mb-[2px] md:[&_li]:mb-[4px] [&_ol]:mb-[12px] [&_ol]:ml-[12px] [&_ol]:list-decimal [&_ol]:pl-[12px] md:[&_ol]:mb-[16px] md:[&_ol]:ml-[16px] md:[&_ol]:pl-[16px] [&_p]:py-[0.8rem] md:[&_p]:py-[0.8rem] [&_table]:my-[8px] [&_table]:ml-[8px] [&_table]:block [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-x-auto [&_table]:border [&_table]:border-gray-300 [&_table]:text-[10px] md:[&_table]:my-[8px] md:[&_table]:ml-[16px] md:[&_table]:table md:[&_table]:text-[14px] [&_td]:border [&_td]:border-gray-300 [&_td]:px-[8px] [&_td]:py-[6px] md:[&_td]:px-[12px] md:[&_td]:py-[8px] [&_th]:whitespace-nowrap [&_th]:border [&_th]:border-gray-300 [&_th]:bg-accent [&_th]:px-[8px] [&_th]:py-[6px] [&_th]:text-left [&_th]:font-bold [&_th]:text-white md:[&_th]:px-[12px] md:[&_th]:py-[8px] [&_tr:nth-child(even)]:bg-gray-50 [&_ul]:mb-[12px] [&_ul]:ml-[12px] [&_ul]:list-disc [&_ul]:pl-[12px] md:[&_ul]:mb-[16px] md:[&_ul]:ml-[16px] md:[&_ul]:pl-[16px]`}
               dangerouslySetInnerHTML={{ __html: product.contents }}
             />
           )}
 
-          {/* Outputs */}
-          {product.outputs.length > 0 && (
-            <div className="mb-[40px] md:mb-[73px]">
-              <h2 className="mb-[16px] font-noto text-[16px] font-bold leading-[normal] text-accent md:mb-[25px] md:text-[24px]">
-                アウトプット
-              </h2>
-              <div className="grid grid-cols-2 gap-[12px] md:flex md:gap-[24px]">
-                {product.outputs.map((output, index) => (
-                  <a
-                    key={index}
-                    href={output.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-[40px] w-full transform items-center justify-center rounded-[20px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95 md:w-[144px]"
-                  >
-                    <span className="font-noto text-[12px] font-bold text-accent hover:text-white md:text-[16px]">
-                      {output.type}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Navigation */}
-          <div className="mt-[80px] flex flex-col items-center justify-between gap-[16px] md:flex-row md:gap-0">
+          <div className="mt-[80px] flex flex-row items-center justify-between">
             {prevId ? (
               <Link
                 href={`/products/${prevId}`}
-                className="order-1 font-noto text-[18px] font-bold leading-[normal] text-accent underline md:order-1 md:text-[24px]"
+                className="font-noto text-[14px] font-bold leading-[normal] text-accent underline md:text-[24px]"
               >
                 &lt; PREV
               </Link>
             ) : (
-              <span className="order-1 font-noto text-[18px] font-bold leading-[normal] text-gray-300 md:order-1 md:text-[24px]">
+              <span className="font-noto text-[14px] font-bold leading-[normal] text-gray-300 md:text-[24px]">
                 &lt; PREV
               </span>
             )}
             <Link
               href="/products"
-              className="order-3 flex h-[60px] w-full transform items-center justify-center rounded-[4px] border-2 border-accent px-[12px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95 md:order-2 md:h-[74px] md:w-[203px]"
+              className="group flex h-[50px] transform items-center justify-center rounded-[4px] border-2 border-accent px-[16px] py-[10px] transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:shadow-md active:scale-95 md:h-[74px] md:w-[203px]"
             >
-              <span className="font-noto text-[16px] font-bold text-accent md:text-[18px]">
+              <span className="font-noto text-[12px] font-bold text-accent transition-colors group-hover:text-white md:text-[18px]">
                 PRODUCTSに戻る
               </span>
             </Link>
             {nextId ? (
               <Link
                 href={`/products/${nextId}`}
-                className="order-2 font-noto text-[18px] font-bold leading-[normal] text-accent underline md:order-3 md:text-[24px]"
+                className="font-noto text-[14px] font-bold leading-[normal] text-accent underline md:text-[24px]"
               >
                 NEXT &gt;
               </Link>
             ) : (
-              <span className="order-2 font-noto text-[18px] font-bold leading-[normal] text-gray-300 md:order-3 md:text-[24px]">
+              <span className="font-noto text-[14px] font-bold leading-[normal] text-gray-300 md:text-[24px]">
                 NEXT &gt;
               </span>
             )}

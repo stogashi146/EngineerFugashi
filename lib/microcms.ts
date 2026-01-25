@@ -66,10 +66,10 @@ export async function getProducts(
     endpoint: 'products',
     queries: {
       limit: 100,
+      orders: '-releaseDate',
       ...queries,
     },
   })
-  console.log(data)
 
   return {
     products: data.contents.map(transformToProduct),

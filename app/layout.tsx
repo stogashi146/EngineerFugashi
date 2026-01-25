@@ -27,6 +27,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: 'Engineer Fugashi - フルスタックエンジニア',
   description: 'フルスタックエンジニア Fugashi のポートフォリオサイト',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

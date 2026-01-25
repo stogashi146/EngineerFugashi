@@ -21,7 +21,7 @@ function stripHtml(html: string): string {
 // WordPress記事を取得
 async function fetchWordPressPosts(): Promise<Post[]> {
   try {
-    const res = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/posts?per_page=10&_embed`, {
+    const res = await fetch(`${WORDPRESS_URL}/?rest_route=/wp/v2/posts&per_page=10&_embed`, {
       next: { revalidate: 3600 },
     })
     if (!res.ok) return []
