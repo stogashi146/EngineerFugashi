@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import SocialButton from '../ui/SocialButton'
 import SectionTitle from '../ui/SectionTitle'
-import { BLOG_URL, GITHUB_URL, X_URL } from '@/data/constants'
+import { BLOG_URL, X_URL } from '@/data/constants'
 
 export default function ProfileDetail() {
   return (
@@ -13,12 +13,12 @@ export default function ProfileDetail() {
             className="relative w-full flex-shrink-0 md:hidden"
             style={{ aspectRatio: '407/407' }}
           >
-            <Image src="/images/profile-sp.png" alt="Profile" fill className="object-cover" />
+            <Image src="/images/profile.jpg" alt="Profile" fill className="object-cover" />
           </div>
           {/* Desktop Image */}
           <div className="relative hidden w-[80%] flex-1 self-stretch md:block">
             <Image
-              src="/images/profile.png"
+              src="/images/profile.jpg"
               alt="Profile"
               width={1100}
               height={900}
@@ -35,7 +35,7 @@ export default function ProfileDetail() {
 
             <div className="mb-[24px] font-noto-jp text-[16px] leading-[30px] text-[#373737] md:mb-[24px]">
               <p className="mb-4 leading-[1.6em]">
-                IT業界で約10年、うち後半5年はWEBフルスタック開発に従事。
+                IT業界で約10年、うち後半5年はWebフルスタック開発に従事。
                 <br />
                 バックエンドは Ruby・TypeScript、 フロントは React を得意とし、 直近では PM
                 やテックリードも担当。 <br />
@@ -64,7 +64,6 @@ export default function ProfileDetail() {
             <div className="mb-[24px] mr-auto flex gap-[12px] md:gap-[px]">
               <SocialButton href={X_URL}>X</SocialButton>
               <SocialButton href={BLOG_URL}>Blog</SocialButton>
-              <SocialButton href={GITHUB_URL}>GitHub</SocialButton>
             </div>
           </div>
         </div>

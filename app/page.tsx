@@ -1,14 +1,16 @@
-import Header from '@/components/layout/Header'
 import Profile from '@/components/home/Profile'
-import Works from '@/components/home/Works'
+import Products from '@/components/home/Products'
 import Posts from '@/components/home/Posts'
 import Contact from '@/components/layout/Contact'
+import { getProducts } from '@/lib/microcms'
 
-export default function Home() {
+export default async function Home() {
+  const { products } = await getProducts()
+
   return (
     <>
       <Profile />
-      <Works />
+      <Products products={products} />
       <Posts />
       <Contact />
     </>

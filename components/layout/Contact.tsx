@@ -1,4 +1,5 @@
 import SectionTitle from '@/components/ui/SectionTitle'
+import { GOOGLE_FORM_URL } from '@/data/constants'
 
 export default function Contact() {
   return (
@@ -11,11 +12,12 @@ export default function Contact() {
           <SectionTitle sectionType="h2" title="CONTACT" subtitle="お問い合わせ" />
         </div>
 
-        <h3 className="mb-[12px] font-noto text-[22px] font-bold leading-[normal] text-accent md:text-[26px]">
+        <h3 className="mb-[12px] font-noto text-[16px] font-bold leading-[normal] text-accent md:text-[26px]">
           お問い合わせはこちらから
         </h3>
-        <p className="mx-auto mb-[31px] max-w-[380px] font-noto text-[16px] font-medium leading-[normal] text-black md:mb-[32px] md:max-w-none md:text-[18px]">
-          お問い合わせやお仕事に関する依頼は こちらからお願いします
+        <p className="mx-auto mb-[31px] max-w-[380px] font-noto text-[14px] font-medium leading-[normal] text-black md:mb-[32px] md:max-w-none md:text-[18px]">
+          お問い合わせやお仕事に関する依頼は
+          <br /> こちらからお願いします
         </p>
 
         <div className="mx-auto mb-[32px] h-[65px] w-[65px] md:mb-[32px] md:h-[80px] md:w-[80px]">
@@ -25,8 +27,9 @@ export default function Contact() {
         </div>
 
         <a
-          href="#"
-          className="inline-flex h-[66px] w-[238px] transform items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95"
+          href={GOOGLE_FORM_URL}
+          target="_blank"
+          className="inline-flex h-[66px] w-[200px] transform items-center justify-center gap-1 rounded border-2 border-accent py-[10px] font-noto text-[18px] font-medium text-accent transition-all duration-300 ease-in-out hover:scale-105 hover:bg-accent hover:text-white hover:shadow-md active:scale-95"
         >
           <span>Contact</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

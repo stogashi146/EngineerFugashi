@@ -2,26 +2,26 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Badge from '../ui/Badge'
 
-interface WorkDetailCardProps {
-  id: number
+interface ProductDetailCardProps {
+  id: number | string
   imageUrl: string
-  category: string
-  period: string
+  category: string[]
+  releaseDate: string
   title: string
   badges?: Array<{ label: string; variant?: 'primary' | 'secondary' }>
 }
 
-export default function WorkDetailCard({
+export default function ProductDetailCard({
   id,
   imageUrl,
   category,
-  period,
+  releaseDate,
   title,
   badges = [],
-}: WorkDetailCardProps) {
+}: ProductDetailCardProps) {
   return (
     <Link
-      href={`/works/${id}`}
+      href={`/products/${id}`}
       className="group block transition-transform duration-300 hover:-translate-y-1"
     >
       <div
@@ -37,10 +37,10 @@ export default function WorkDetailCard({
       </div>
 
       <div className="mb-[6px] font-noto-jp text-[12px] font-medium leading-[normal] text-black md:mb-[8px] md:text-[14px]">
-        <p className="mb-0 text-[10px]">
-          {category} | {period}
+        <p className="mb:text-[16px] mb-0 text-[14px] font-medium text-black">{title}</p>
+        <p className="mb-[4px] text-[12px] text-[#373737]">
+          {category.join(' / ')} | {releaseDate}
         </p>
-        <p className="mb-0 text-[14px] text-accent">{title}</p>
       </div>
 
       <div className="flex flex-wrap gap-[4px]">

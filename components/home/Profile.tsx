@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import SocialButton from '../ui/SocialButton'
 import Button from '../ui/Button'
-import { BLOG_URL, GITHUB_URL, PROFILE_PAGE, X_URL } from '@/data/constants'
-import Link from 'next/link'
+import { BLOG_URL, PROFILE_PAGE, X_URL } from '@/data/constants'
 
 export default function Profile() {
   return (
@@ -14,12 +13,12 @@ export default function Profile() {
             className="relative w-full flex-shrink-0 md:hidden"
             style={{ aspectRatio: '407/407' }}
           >
-            <Image src="/images/profile-sp.png" alt="Profile" fill className="object-cover" />
+            <Image src="/images/profile.jpg" alt="Profile" fill className="object-cover" />
           </div>
           {/* Desktop Image */}
           <div className="relative hidden w-[80%] flex-1 self-stretch md:block">
             <Image
-              src="/images/profile.png"
+              src="/images/profile.jpg"
               alt="Profile"
               width={1100}
               height={900}
@@ -36,7 +35,7 @@ export default function Profile() {
 
             <div className="mb-[16px] font-noto-jp text-[16px] leading-[30px] text-[#373737]">
               <p className="mb-0">フリーランスエンジニア</p>
-              <p className="mb-0">IT業界で約10年、うち後半5年はWEBフルスタック開発に従事。</p>
+              <p className="mb-0">IT業界で約10年、うち後半5年はWebフルスタック開発に従事。</p>
               <p className="mb-0">
                 バックエンドは Ruby・TypeScript、フロントは React を得意とし、直近では PM
                 やテックリードも担当。
@@ -51,11 +50,10 @@ export default function Profile() {
             <div className="mb-[24px] mr-auto flex gap-[8px] md:justify-evenly md:gap-[8px]">
               <SocialButton href={X_URL}>X</SocialButton>
               <SocialButton href={BLOG_URL}>Blog</SocialButton>
-              <SocialButton href={GITHUB_URL}>GitHub</SocialButton>
             </div>
 
-            <div className="mt-auto flex justify-center text-right md:block">
-              <Button href={PROFILE_PAGE} variant="primary" size="medium">
+            <div className="mt-auto flex justify-end text-right md:block">
+              <Button href={PROFILE_PAGE} variant="outline" size="medium">
                 More
               </Button>
             </div>

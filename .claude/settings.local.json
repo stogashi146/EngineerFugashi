@@ -3,8 +3,6 @@
     "allow": [
       "mcp__figma__get_screenshot",
       "mcp__figma__get_design_context",
-      "Bash(curl:*)",
-      "Bash(npm install:*)",
       "Bash(npm run dev:*)",
       "Bash(tree:*)",
       "Bash(find:*)"

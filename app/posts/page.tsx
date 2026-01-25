@@ -1,8 +1,10 @@
 import Contact from '@/components/layout/Contact'
 import PostsFilteredGrid from '@/components/posts/PostsFilteredGrid'
-import { posts } from '@/data/posts'
+import { getAllPosts } from '@/lib/posts'
 
-export default function PostsPage() {
+export default async function PostsPage() {
+  const posts = await getAllPosts()
+
   return (
     <>
       {/* POSTS Title */}

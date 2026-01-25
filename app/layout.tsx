@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className={`${inter.variable} ${notoSans.variable} ${notoSansJP.variable}`}>
-        <main className="min-h-screen w-full bg-white">
+        <main className="flex min-h-screen w-full flex-col bg-white">
           <Header />
           {children}
           <Footer />

@@ -33,11 +33,11 @@ export default function Header() {
             </span>
           </Link>
           <Link
-            href="/works"
+            href="/products"
             className="flex h-full items-center font-noto text-[16px] font-medium transition-all duration-300 hover:-translate-y-0.5"
           >
             <span className="group relative text-black transition-colors duration-300 hover:text-accent">
-              WORKS
+              PRODUCTS
               <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full"></span>
             </span>
           </Link>
@@ -104,11 +104,11 @@ export default function Header() {
             PROFILE
           </Link>
           <Link
-            href="/works"
+            href="/products"
             className="group border-b border-gray-200 py-4 font-noto text-[16px] font-medium text-black transition-all duration-300 hover:translate-x-2 hover:text-accent active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
-            WORKS
+            PRODUCTS
           </Link>
           <Link
             href="/posts"

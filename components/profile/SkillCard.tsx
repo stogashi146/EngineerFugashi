@@ -17,7 +17,7 @@ export default function SkillCard({ icon, title, description }: SkillCardProps) 
           {title}
         </h4>
       </div>
-      <p className="font-noto-jp text-[12px] leading-[normal] text-black md:text-[14px]">
+      <p className="whitespace-pre-line font-noto-jp text-[14px] leading-[normal] text-black">
         {description}
       </p>
     </div>

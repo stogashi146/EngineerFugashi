@@ -15,7 +15,7 @@ export default function HistoryItem({
     <div className="relative">
       {/* Timeline dot */}
       <div
-        className={`absolute -left-[47px] h-[20px] w-[20px] rounded-full bg-accent md:-left-[72px] md:h-[24px] md:w-[24px] ${isFirst ? 'top-[31px]' : 'top-[31px]'}`}
+        className={`absolute -left-[56px] h-[20px] w-[20px] rounded-full bg-accent md:-left-[72px] md:h-[24px] md:w-[24px] ${isFirst ? 'top-[31px]' : 'top-[31px]'}`}
       />
 
       <div className="mb:w-[90%] relative rounded-[12px] border border-black bg-main p-[16px] md:p-6">
