@@ -1,5 +1,6 @@
 import SectionTitle from '@/components/ui/SectionTitle'
 import Contact from '@/components/layout/Contact'
+import { GOOGLE_FORM_URL } from '@/data/constants'
 
 const SECTIONS = [
   {
@@ -81,8 +82,7 @@ const SECTIONS = [
   {
     title: '第10条（お問い合わせ）',
     paragraphs: ['本ポリシーに関するお問い合わせは、以下までお願いいたします。'],
-    contactUrl:
-      'https://docs.google.com/forms/d/e/1FAIpQLSfgcl3wonvS83rzQPhaTigotOusqyJRHwbXWSPnQEAxLXKPtg/viewform',
+    contactUrl: GOOGLE_FORM_URL,
   },
 ] as const
 
