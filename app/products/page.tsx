@@ -2,6 +2,8 @@ import Contact from '@/components/layout/Contact'
 import ProductsFilteredGrid from '@/components/products/ProductsFilteredGrid'
 import { getProducts } from '@/lib/microcms'
 
+export const revalidate = 3600
+
 export default async function ProductsPage() {
   const { products } = await getProducts()
 

@@ -3,6 +3,8 @@ import Contact from '@/components/layout/Contact'
 import ProductDetailContent from '@/components/products/ProductDetailContent'
 import { getProductById, getAllProductIds } from '@/lib/microcms'
 
+export const revalidate = 3600
+
 // 静的生成用のパラメータを生成
 export async function generateStaticParams() {
   const ids = await getAllProductIds()

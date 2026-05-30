@@ -159,7 +159,7 @@ export default function ProductDetailContent({
                   // ロゴ画像があるタイプ
                   const logoMap: Record<string, string> = {
                     AppStore: '/images/store/apple_store_logo.svg',
-                    GooglePlay: '/images/store/google_play_logo.svg',
+                    GooglePlay: '/images/store/google_play_logo.png',
                   }
                   const logo = logoMap[output.type]
 
